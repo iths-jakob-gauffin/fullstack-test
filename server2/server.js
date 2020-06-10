@@ -12,10 +12,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 ///// Få in hamsterdatan (data.json) i firestore, anropar därför denna funktion endast en gång. Jag skickar med den trots funktionen inte anropas.
-const data = require('./deploytest/server/data.json');
-const {
-	getDataIntoFirestore
-} = require('./deploytest/server/uploadDataToFirestore');
+const data = require('./data.json');
+const { getDataIntoFirestore } = require('./uploadDataToFirestore');
 ///// Initera databasen
 // getDataIntoFirestore(data);
 
@@ -50,12 +48,12 @@ let test = '123';
 // });
 
 //Routes
-const hamstersRoutes = require('./deploytest/server/routes/hamstersRoute');
-const chartsRoutes = require('./deploytest/server/routes/chartsRoute');
-const gamesRoutes = require('./deploytest/server/routes/gamesRoute');
-const statsRoutes = require('./deploytest/server/routes/statsRoute');
-const filesRoutes = require('./deploytest/server/routes/filesRoute');
-const assetsRoutes = require('./deploytest/server/routes/assetsRoute');
+const hamstersRoutes = require('./routes/hamstersRoute');
+const chartsRoutes = require('./routes/chartsRoute');
+const gamesRoutes = require('./routes/gamesRoute');
+const statsRoutes = require('./routes/statsRoute');
+const filesRoutes = require('./routes/filesRoute');
+const assetsRoutes = require('./routes/assetsRoute');
 
 ///// Denna är när jag vill serva bilderna direkt ifrån mappen på resursen /assets. Men eftersom jag använder firebase storage så har jag avmarkerat denna kodrad
 // app.use('/assets', express.static('hamsters'));

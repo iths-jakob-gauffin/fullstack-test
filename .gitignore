@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Från BE-projekt
-/server/serviceAccount.json
-/server/.env
+# /server2/serviceAccount.json
+# /server2/.env
